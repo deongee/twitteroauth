@@ -16,14 +16,11 @@
       <p>This site is a basic showcase of Twitters OAuth authentication method. If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 
       <p>
-        Base On:
+        Links:
         <a href='http://github.com/abraham/twitteroauth'>Source Code</a> &amp;
+        <a href='http://wiki.github.com/abraham/twitteroauth/documentation'>Documentation</a> |
         Contact @<a href='http://twitter.com/abraham'>abraham</a>
       </p>
-	  <p>added working example  
-		 <a href="token.php">manual token</a> &
-		 <a href="search.php">sample search implementation</a>
-	  </p>
       <hr />
       <?php if (isset($menu)) { ?>
         <?php echo $menu; ?>
@@ -37,44 +34,6 @@
         <?php print_r($content); ?>
       </pre>
     </p>
-	<p>
-	<?php if (isset($denget)) { ?>
-    
-	your id = <?php echo $denget->id; ?><br/>
-	your name = <?php echo $denget->name; ?><br/>
-	
-
-	<?php 
-	echo '<pre>';
-	//print_r($denget->id); 
-	//echo 'id = '.$denget->id; 
-	$result = json_encode($denget);
-	//$result = json_decode($denget,true);
-	//echo $result; 
-	//echo $denget[115806808]['name'];
-	//foreach ($denget as $get):
-	//	print_r( $get);
-	//endforeach;
-	//echo $denget;
-	
-	
-	//get key and value from array
-	$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($result, TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
-
-		foreach ($jsonIterator as $key => $val) {
-			if(is_array($val)) {
-				echo "$key:\n";
-			} else {
-				echo "$key => $val\n";
-			}
-		}
-	?>
-		
-	<?php } ?>
-    <p>
-	</p>
 
   </body>
 </html>

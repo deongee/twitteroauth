@@ -113,3 +113,11 @@ Contributors
 ============
 
 * [Abraham Williams](https://twitter.com/abraham) - Main developer, current maintainer.
+* [Widiyastanto](https://twitter.com/widiyastanto) - Code Tester.
+
+Change
+======
+
+1. Create token.php - set the setting manually from https://dev.twitter.com/apps/
+2. Change flow to redirect.php to denredir.php
+3. Create Search.php to see json search sample
